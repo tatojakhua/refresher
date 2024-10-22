@@ -1,6 +1,8 @@
-export async function fetchUsers() {
-    const url =
-        "https://randomuser.me/api/?results=5&inc=name,gender,phone,picture";
+export async function fetchUsers(num, paramsArray) {
+    let stringParams = paramsArray.toString();
+    console.log(stringParams);
+
+    const url = `https://randomuser.me/api/?results=${num}&inc=${stringParams}`;
     const res = await fetch(url);
     if (res.ok) {
         const data = await res.json();

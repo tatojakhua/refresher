@@ -4,7 +4,7 @@ import CardsWrapper from "./components/CardsWrapper";
 
 function App() {
     const [userInfo, setUserInfo] = useState({ email: "", password: "" });
-    const [showUser, setShowUser] = useState(false);
+    const [showUser, setShowUser] = useState(true);
 
     const handleUserInfo = (e) => {
         setUserInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -25,8 +25,6 @@ function App() {
             setShowUser(true);
         }
     };
-
-    console.log(showUser);
 
     return (
         <>
